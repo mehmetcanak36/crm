@@ -16,7 +16,7 @@ $conn = connect();
 
 </head>
 <body>
-<?php #include "header.php" 
+<?php 
 ?>
 <div class="container">
 

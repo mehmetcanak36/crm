@@ -4,7 +4,8 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 #echo $password,$username;
 $data=control($username,$password);
-if(isset($data)){
+
+if($data == true){
     header('Location: mainpage.php');
 }
 else{

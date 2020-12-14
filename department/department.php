@@ -40,10 +40,10 @@ $data=listTable($table);
     </tr>
   </thead>
   <tbody>
-<!--  --><?php // var_dump(count($listData)); ?>
+<!--  --><?php  ?>
 
 <?php 
-##if(isset($data)){print_r("data yok");}
+
 foreach($data as $listData) { ?>
     <tr>
       <th scope="row"><?php echo $listData['did']; ?></th>
@@ -53,6 +53,7 @@ foreach($data as $listData) { ?>
       <td><?php echo $listData['dPhoneNumber']; ?></td>
       <td><?php echo $listData['dAddress']; ?></td>
         <td>
+      <a href="imagefile.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-outline-success">dosya ekle</button>
       <a href="updatedepartment.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-success">düzenle</button>
       <a href="delete.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-danger">sil</button>
         </td>
