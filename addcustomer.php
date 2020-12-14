@@ -1,8 +1,8 @@
 <?php include "function.php";
 $tablem="manager";
 $tabled="department";
-$datam=getdata($tablem);
-$datad=getdata($tabled);
+$datam=getdatatable($tablem);
+$datad=getdatatable($tabled);
 
 ?>
 <!doctype html>
@@ -40,9 +40,16 @@ $datad=getdata($tabled);
             <label for="exampleInput4" class="form-label">Müşteri Adresi : </label>
             <input type="text" name="cAddress" class="form-control" id="example4" placeholder="müşteri adresi giriniz: ">
         </div>
-        <?php foreach ($datam as $d){ ?>
         <select class="form-control form-control-lg">
-           
+        <label for="exampleInput5" class="form-label">yönetici seç :</label>
+        <?php foreach ($datam as $d){ ?>
+        
+            
+             <option value="<?php echo $d['mName']?>"><?php echo $d['mName']?></option> <?php }?>
+        </select>
+        <select class="form-control form-control-lg"> 
+        <label for="exampleInput5" class="form-label">kurum seç :</label>
+        <?php foreach ($datad as $d){ ?>
              <option value="<?php echo $d['dName']?>"><?php echo $d['dName']?></option> <?php }?>
         </select>
         <br><br>
