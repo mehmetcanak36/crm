@@ -67,6 +67,14 @@ function control($username,$password){
        }
    }
 }
+function getdatatable($table) {
+    $conn=connect();
+    $conn=connect();
+    $query="SELECT * FROM $table";
+    $data=mysqli_query($conn,$query);
+
+    return $data;
+}
 
 
 

@@ -1,6 +1,9 @@
 <?php include "function.php";
-$table="customer";
-$conn = connect();
+$tablem="manager";
+$tabled="department";
+$datam=getdata($tablem);
+$datad=getdata($tabled);
+
 ?>
 <!doctype html>
 <html lang="tr">
@@ -37,24 +40,15 @@ $conn = connect();
             <label for="exampleInput4" class="form-label">Müşteri Adresi : </label>
             <input type="text" name="cAddress" class="form-control" id="example4" placeholder="müşteri adresi giriniz: ">
         </div>
-        <div class="mb-3">
-            <label for="exampleInput5" class="form-label">manager id : </label>
-            <input type="text" name="management_id" class="form-control" id="example5" placeholder="manager id giriniz: ">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInput6" class="form-label">kurum id : </label>
-            <input type="text" name="department_id" class="form-control" id="example6" placeholder="kurum id giriniz: ">
-        </div>
-        
-        
-
+        <?php foreach ($datam as $d){ ?>
+        <select class="form-control form-control-lg">
+           
+             <option value="<?php echo $d['dName']?>"><?php echo $d['dName']?></option> <?php }?>
+        </select>
+        <br><br>
         <button type="submit" class="btn btn-primary">MÜŞTERİ EKLE</button>
     </form>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
 
 </body>
 </html>
