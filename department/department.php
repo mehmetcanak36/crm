@@ -53,7 +53,6 @@ foreach($data as $listData) { ?>
       <td><?php echo $listData['dPhoneNumber']; ?></td>
       <td><?php echo $listData['dAddress']; ?></td>
         <td>
-      <a href="imagefile.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-outline-success">dosya ekle</button>
       <a href="updatedepartment.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-success">düzenle</button>
       <a href="delete.php?did=<?php echo $listData['did']; ?>" > <button type="submit" class="btn btn-danger">sil</button>
         </td>

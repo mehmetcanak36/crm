@@ -48,7 +48,7 @@ $data=listTable($table);
 ##if(isset($data)){print_r("data yok");}
 foreach($data as $listData) { ?>
     <tr>
-      <th scope="row"><?php echo $listData['id']; ?></th>
+      <td><img src="showimage.php?id=" <?php echo $listData['id']; ?> /></td>
       <td><?php echo $listData['cName']; ?></td>
       <td><?php echo $listData['cLastName']; ?></td>
       <td><?php echo $listData['cAddress']; ?></td>
@@ -58,6 +58,7 @@ foreach($data as $listData) { ?>
       
 
         <td>
+      <a href="imagefile.php?id=<?php echo $listData['id']; ?>" > <button type="submit" class="btn btn-outline-success">dosya ekle</button>
       <a href="updatecustomer.php?id=<?php echo $listData['id']; ?>" > <button type="submit" class="btn btn-success">düzenle</button>
       <a href="delete.php?id=<?php echo $listData['id']; ?>" > <button type="submit" class="btn btn-danger">sil</button>
         </td>
