@@ -4,4 +4,5 @@ $sourcefile = "uploadsimage";
 header('Content-Type: image/jpeg');
 
 readfile(''.$kaynakKlasor.'/'.$resimAdresi.'.jpg');
+
 ?>
